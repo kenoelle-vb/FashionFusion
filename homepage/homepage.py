@@ -655,4 +655,4 @@ def outfit_recommendation4():
                            value_sweater4=value_sweater4)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
