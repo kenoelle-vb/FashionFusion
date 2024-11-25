@@ -1,0 +1,9 @@
+flask 
+pandas
+gspread 
+oauth2client
+gspread_dataframe
+scikit-surprise
+scikit-learn 
+csv
+google-generativeai
