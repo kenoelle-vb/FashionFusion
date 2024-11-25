@@ -17,7 +17,7 @@ import csv
 import google.generativeai as genai
 
 
-app = Flask(__name__, template_folder="../homepage", static_folder="C:/Users/keno/OneDrive/Documents/SGU Hackathon")
+app = Flask(__name__, template_folder="../homepage", static_folder="../images")
 
 #Shit that needs to happen
 chat_log = []
