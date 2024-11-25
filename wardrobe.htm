@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wardrobe</title>
+    <style>
+        body {
+            background-color: #2a2a68;
+            display: flex;
+            flex-direction: row;
+            height: 100vh; /* adjust to screen height */
+            margin: 0;
+        }
+        .left {
+            width: 50%;
+            padding: 5%;
+            border-right: 1px solid #ccc;
+        }
+        .right {
+            width: 50%;
+            padding: 5%;
+        }
+        .card {
+            background-color: #eee0c9;
+            padding: 5%;
+            border: 1px solid #ccc;
+            border-radius: 1%;
+            box-shadow: 0 0 5% rgba(0, 0, 0, 0.1);
+        }
+        .card select {
+            width: 100%;
+            padding: 2%;
+            margin-bottom: 5%;
+        }
+        .card input[type="submit"] {
+            background-color: #2a2a68;
+            color: #eee0c9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5%;
+            cursor: pointer;
+        }
+        .card input[type="submit"]:hover {
+            background-color: #1a1a3f;
+        }
+        h2 {
+            color: #eee0c9;
+            margin-top: 0;
+        }
+        /* Add styles for the dataframe table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+            background-color: #fff; /* white background */
+            color: #2a2a68; /* white text */
+        }
+        th {
+            background-color: #eee0c9; /* light gray background */
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="card">
+            <form action="" method="post">
+                <label for="question1">Type</label><br>
+                <select id="question1" name="question1">
+                    <option value="Shirt">Shirt (Collar)</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="Sweater">Sweater</option>
+                    <option value="Jeans">Jeans</option>
+                    <option value="Shoes">Shoes</option>
+                </select><br>
+                <label for="question2">Brand</label><br>
+                <select id="question2" name="question2">
+                    <option value="Adidas">Adidas</option>
+                    <option value="H&M">H&M</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Zara">Zara</option>
+                </select><br>
+                <label for="question3">Color</label><br>
+                <select id="question3" name="question3">
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                </select><br>
+                <label for="question4">Size</label><br>
+                <select id="question4" name="question4">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select><br>
+                <label for="question5">Rating</label><br>
+                <select id="question5" name="question5">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <h2>Input Wardrobe</h2>
+        {{ df_wardrobe | safe }}
+    </div>
+</body>
+</html>
