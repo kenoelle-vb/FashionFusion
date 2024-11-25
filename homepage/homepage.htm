@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFusion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2c5b;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transform: scale(1.25);
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        .feature {
+            background-color: #f4e9cd;
+            color: #1e2c5b;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+        .feature p {
+            margin-bottom: 15px;
+        }
+        .feature button {
+            padding: 10px 20px;
+            background-color: #1e2c5b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .feature button:hover {
+            background-color: #162448;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FashionFusion</h1>
+        <p>Let's mix and match our outfits together!</p>
+        <div class="features">
+            <div class="feature">
+                <h3>Wardrobe</h3>
+                <p>Input your wardrobe into our website and let us know your preferences!!!</p>
+                <a href="/wardrobe" target="_blank"><button>Wardrobe</button></a>
+            </div>
+            <div class="feature">
+                <h3>Catalogue</h3>
+                <p>Check Out our Catalogue of Clothes</p>
+                <a href="https://drive.google.com/file/d/1pO4GsxStplmey-QzqjpfIzBBxT3XQYdK/view?usp=sharing" target="_blank"><button>Try-On!!</button></a>
+            </div>
+            <div class="feature">
+                <h3>Chatbot</h3>
+                <p>Consult and chat with our AI Assistant about your queries or questions!!!</p>
+                <a href="/chatbot" target="_blank"><button>Chat</button></a>
+            </div>
+            <div class="feature">
+                <h3>Outfit Recommendation</h3>
+                <p>See our outfit recommendations for you based on your wardrobe preferences!!!</p>
+                <a href="/outfitrecommendation" target="_blank"><button>Recommend</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
