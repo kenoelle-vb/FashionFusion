@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try Out</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1A2A55;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .home-button img {
+            width: 50px;
+            height: 50px;
+        }
+        .virtual-tryout {
+            background-color: #B29F77;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .virtual-tryout h2 {
+            margin-top: 0;
+            color: #FFFFFF;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #FFFFFF;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #1A2A55;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #16394a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="home-button">
+            <img src="https://i.ibb.co/xHgx47j/houseicon.png" alt="Home">
+        </a>
+        <div class="virtual-tryout">
+            <h2>Virtual Try Out</h2>
+            <form action="/tryout" method="POST">
+                <div class="form-group">
+                    <label for="clothes">Clothes</label>
+                    <select name="clothes" id="clothes">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pants">Pants</label>
+                    <select name="pants" id="pants">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shoes">Shoes</label>
+                    <select name="shoes" id="shoes">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Try!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
