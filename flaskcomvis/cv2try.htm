@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try Out</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            background-color: #1A2A55;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .home-button img {
+            width: 50px;
+            height: 50px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            height: 80%;
+        }
+        .opencv-display {
+            width: 70%;
+            height: 100%;
+            background-color: white;
+        }
+        .virtual-tryout {
+            width: 25%;
+            background-color: #B29F77;
+            padding: 20px;
+            border-radius: 10px;
+            color: #FFFFFF;
+        }
+        .virtual-tryout h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+        }
+        .submit-button {
+            background-color: #1A2A55;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="home-button">
+            <img src="https://i.ibb.co/xHgx47j/houseicon.png" alt="Home">
+        </a>
+        <div class="content">
+            <div class="opencv-display">
+                <!-- OpenCV display space -->
+                <video id="opencv-output" width="100%" height="100%" autoplay></video>
+            </div>
+            <div class="virtual-tryout">
+                <h2>Virtual Try Out</h2>
+                <form action="/tryout" method="POST">
+                    <div class="form-group">
+                        <label for="clothes">Clothes</label>
+                        <select name="clothes" id="clothes">
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pants">Pants</label>
+                        <select name="pants" id="pants">
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shoes">Shoes</label>
+                        <select name="shoes" id="shoes">
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Set</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const video = document.getElementById('opencv-output');
+        video.src = '/video_feed';
+    </script>
+</body>
+</html>
